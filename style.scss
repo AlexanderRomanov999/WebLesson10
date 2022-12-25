@@ -1,3 +1,5 @@
+$bcolor: #3A68B8;
+
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +40,7 @@ body {
     font-size: 18px;
     line-height: 160%;
     text-transform: uppercase;
-    color: #3A68B8;
+    color: $bcolor;
     margin-top: 160px;
     margin-bottom: 10px;
 }
@@ -68,7 +70,7 @@ body {
     font-family: 'Open Sans';
     padding: 15px 30px;
     gap: 10px;
-    background: #3A68B8;
+    background: $bcolor;
     border-radius: 5px;
     font-style: normal;
     font-weight: 600;
@@ -80,8 +82,8 @@ body {
 
 .index_button:hover {
 	background: #FFFFFF;
-	color: #3A68B8;
-	border: 3px solid  #3A68B8;
+	color: $bcolor;
+	border: 3px solid  $bcolor;
 }
 
 .header_menu {
@@ -140,7 +142,7 @@ body {
     align-items: flex-start;
     padding: 15px 30px;
     gap: 10px;
-    background: #3A68B8;
+    background: $bcolor;
     border-radius: 5px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -152,8 +154,8 @@ body {
 
 .button_2:hover {
 	background: #FFFFFF;
-	color: #3A68B8;
-	border: 3px solid #3A68B8;;
+	color: $bcolor;
+	border: 3px solid $bcolor;
 }
 
 .main_dc_2 {
