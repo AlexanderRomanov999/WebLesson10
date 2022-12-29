@@ -59,6 +59,16 @@ body {
 .menu_link {
     @include txt ('Open Sans', normal, 600, 16px, 22px, none, none, center, #FFFFFF, 1);
     @include pos (0, 0, 0, 0, 40px, 20px, 40px, 20px);
+    border-radius: 10px;
+    transition: color 1s;
+}
+
+.menu_link:hover {
+    color: $bcolor;
+}
+
+.menu_link:active {
+    color: $clickcolor;
 }
 
 .title3 {
@@ -73,7 +83,7 @@ body {
 
 .main_heading_2 {
     @include txt ('Open Sans', normal, 700, 40px, 130%, none, none, left, #FFFFFF, 1);
-    @include pos (629px, 0, 0, 68px, 0, 0, 0, 0);
+    @include pos (824px, 0, 0, 68px, 0, 0, 0, 0);
 }
 
 .main_heading_3 {
@@ -163,11 +173,15 @@ body {
         gap: 10px;
         background: $bcolor;
         border-radius: 5px;
+        transition: color, background-color 1s;
     }
     .index_button:hover {
         background: #FFFFFF;
         color: $bcolor;
         border: 3px solid $bcolor;
+    }
+    .index_button:active {
+        color: $clickcolor;
     }
 }
 
@@ -216,12 +230,17 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    transition: color, background-color 1s;
 }
 
 .button_2:hover {
 	background: #FFFFFF;
 	color: $bcolor;
 	border: 3px solid $bcolor;
+}
+
+.button_2:active {
+    color: $clickcolor;
 }
 
 .grid-container_2 {
@@ -240,6 +259,14 @@ body {
     grid-row: 2 / 4;
 }
 
+.images {
+    transition: all 1s;
+}
+
+.images:hover {
+    transform: scale(1.5);
+ }
+
 .images_2 {
     @include pos (0, 0, 0, 0, 30px, 132px, 30px, 132px);
 }
@@ -249,7 +276,7 @@ body {
 }
 
 .image_3 {
-    @include pos (1943px, 0, 0, 25px, 0, 0, 0, 0);
+    @include pos (1851px, 0, 0, 25px, 0, 0, 0, 0);
 }
 
 .footer {
@@ -278,4 +305,74 @@ body {
 
 .video {
     @include pos (160px, 0, 0, 128px, 0, 0, 0, 0);
+    transition: all 3s ease;
+}
+
+.video:hover {
+    -webkit-transform: translate(100px, 100px) rotate(360deg);
+}
+
+@-webkit-keyframes flip-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateX(-90deg);
+              transform: scale(2.5) rotateX(-90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-180deg);
+              transform: scale(1) rotateX(-180deg);
+    }
+  }
+  @keyframes flip-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2.5) rotateX(-90deg);
+              transform: scale(2.5) rotateX(-90deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-180deg);
+              transform: scale(1) rotateX(-180deg);
+    }
+  }
+.image_2:hover {
+	-webkit-animation: flip-scale-up-hor 0.5s linear both;
+	        animation: flip-scale-up-hor 0.5s linear both;
+}  
+@-webkit-keyframes slide-rotate-ver-r-bck {
+    0% {
+      -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+              transform: translateX(0) translateZ(0) rotateY(0);
+      -webkit-transform-origin: center right;
+              transform-origin: center right;
+    }
+    100% {
+      -webkit-transform: translateX(150px) translateZ(-230px) rotateY(-90deg);
+              transform: translateX(150px) translateZ(-230px) rotateY(-90deg);
+      -webkit-transform-origin: center right;
+              transform-origin: center right;
+    }
+  }
+  @keyframes slide-rotate-ver-r-bck {
+    0% {
+      -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+              transform: translateX(0) translateZ(0) rotateY(0);
+      -webkit-transform-origin: center right;
+              transform-origin: center right;
+    }
+    100% {
+      -webkit-transform: translateX(150px) translateZ(-230px) rotateY(-90deg);
+              transform: translateX(150px) translateZ(-230px) rotateY(-90deg);
+      -webkit-transform-origin: center right;
+              transform-origin: center right;
+    }
+  }
+.image_3:hover {
+	-webkit-animation: slide-rotate-ver-r-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: slide-rotate-ver-r-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
