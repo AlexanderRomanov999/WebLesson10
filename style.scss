@@ -393,3 +393,9 @@ body {
          width: 100%;
     }
 }
+.carousel-indicators [data-bs-target] {
+    background-color: red;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+}

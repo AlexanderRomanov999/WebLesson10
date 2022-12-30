@@ -710,5 +710,10 @@ body {
 @media (min-width: 768px) and (max-width: 1024px) {
   .content_left, .content_right {
     width: 100%; } }
+.carousel-indicators [data-bs-target] {
+  background-color: red; }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: black; }
 
 /*# sourceMappingURL=style.css.map */
