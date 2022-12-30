@@ -43,6 +43,7 @@
 
 body {
     background-color: #08101e;
+    padding: 3% 2% 0;
 }
 
 .header {
@@ -191,7 +192,15 @@ body {
 }
 
 .content_left {
-    width: 604px;
+    width: 53%;
+}
+
+.content_right {
+    min-width: 45%;
+}
+
+.content_right {
+    max-width: 32%;
 }
 
 .flexbox {
@@ -300,10 +309,13 @@ body {
 }
 
 .footicon_4, .footicon_5, .footicon_6 {
-    @include pos (24px, 0, 24px, 0, 0, 0, 0, 0);
+    @include pos (24px, 0, 0, 24px, 0, 0, 0, 0);
 }
 
+
+
 .video {
+    width:100%;
     @include pos (160px, 0, 0, 128px, 0, 0, 0, 0);
     transition: all 3s ease;
 }
@@ -375,4 +387,9 @@ body {
 .image_3:hover {
 	-webkit-animation: slide-rotate-ver-r-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	        animation: slide-rotate-ver-r-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content_left, .content_right {
+         width: 100%;
+    }
 }

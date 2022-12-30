@@ -10,7 +10,8 @@
   justify-content: center; }
 
 body {
-  background-color: #08101e; }
+  background-color: #08101e;
+  padding: 3% 2% 0; }
 
 .header {
   background-color: #0a121f;
@@ -444,7 +445,13 @@ body {
   justify-content: center; }
 
 .content_left {
-  width: 604px; }
+  width: 53%; }
+
+.content_right {
+  min-width: 45%; }
+
+.content_right {
+  max-width: 32%; }
 
 .flexbox {
   display: flex;
@@ -628,14 +635,15 @@ body {
 .footicon_4, .footicon_5, .footicon_6 {
   margin-top: 24px;
   margin-right: 0;
-  margin-bottom: 24px;
-  margin-left: 0;
+  margin-bottom: 0;
+  margin-left: 24px;
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0; }
 
 .video {
+  width: 100%;
   margin-top: 160px;
   margin-right: 0;
   margin-bottom: 0;
@@ -698,5 +706,9 @@ body {
 .image_3:hover {
   -webkit-animation: slide-rotate-ver-r-bck 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   animation: slide-rotate-ver-r-bck 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content_left, .content_right {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
